@@ -10,7 +10,7 @@ public class ConexionJDBC {
 	
 	public static Connection abrirConexionBBDD() {
 		 String user="root";
-		 String password="ivan2310";
+		 String password="";
 		 Connection conexion=null;
 		
 		String bbdd= "jdbc:mysql://localhost:3306/cicejdbc?user="+user+"&password="+password+"&serverTimezone=Europe/Madrid";
