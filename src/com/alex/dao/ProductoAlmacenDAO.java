@@ -14,7 +14,7 @@ public class ProductoAlmacenDAO implements IProducto_Almacen {
 	@Override
 	public String insertSQL(Producto_Almacen productoAlmacen) {
 		
-		String sentenciaSQL="INSERT INTO productos_almacen (idproducto,idalmacen,stock) VALUES ('"+productoAlmacen.getId_producto()+"','"+productoAlmacen.getId_almacen()+
+		String sentenciaSQL="INSERT INTO productos_almacen (id,idproducto,idalmacen,stock) VALUES ('"+productoAlmacen.getId()+"','"+productoAlmacen.getId_producto()+"','"+productoAlmacen.getId_almacen()+
 				"','"+productoAlmacen.getStock()+"')";
 		return sentenciaSQL;
 	}

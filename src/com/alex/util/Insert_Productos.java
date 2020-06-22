@@ -19,14 +19,14 @@ public class Insert_Productos {
 		ProductoDAO productdao = new ProductoDAO();
 		ProductoAlmacenDAO product_almacendao = new ProductoAlmacenDAO();
 		try {
-			for (int i = 1; i <= 10; i++) {
-				int num = (int) (Math.random() * 100 + 1);
+			for (int i = 1; i <= 100; i++) {
+				int precio = (int) (Math.random() * 100 + 1);
 				int id_almacen = (int) (Math.random() * 9 + 1);
 				int stock = (int) (Math.random() * 9 + 1);
 
-				Producto producto = new Producto(i, "producto_" + i, num);
+				Producto producto = new Producto(i, "producto_" + i, precio);
 				
-				Producto_Almacen product_almacen = new Producto_Almacen(i, id_almacen, stock);
+				Producto_Almacen product_almacen = new Producto_Almacen(i, i, id_almacen, stock);
 
 				stm = conexion.createStatement();
 				stm.execute(productdao.insertSQL(producto));
